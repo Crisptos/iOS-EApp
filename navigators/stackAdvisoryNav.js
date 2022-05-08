@@ -20,12 +20,12 @@ const StackAdvisoryNavigator = () => {
                     headerLeft: null,
                 }}
             />
-            <Stack.Screen name="All" component={AdvisoryAllScreen}/>
-            <Stack.Screen name="Fire" component={AdvisoryFireScreen} />
-            <Stack.Screen name="Health" component={AdvisoryHealthScreen} />
-            <Stack.Screen name="Roads" component={AdvisoryRoadsScreen} />
-            <Stack.Screen name="Weather" component={AdvisoryWeatherScreen} />
-            <Stack.Screen name="Other" component={AdvisoryOtherScreen} />
+            <Stack.Screen name="AdAll" component={AdvisoryAllScreen}/>
+            <Stack.Screen name="AdFire" component={AdvisoryFireScreen} />
+            <Stack.Screen name="AdHealth" component={AdvisoryHealthScreen} />
+            <Stack.Screen name="AdRoads" component={AdvisoryRoadsScreen} />
+            <Stack.Screen name="AdWeather" component={AdvisoryWeatherScreen} />
+            <Stack.Screen name="AdOther" component={AdvisoryOtherScreen} />
         </Stack.Navigator>
     )
 }

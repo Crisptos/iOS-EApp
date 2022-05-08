@@ -20,12 +20,12 @@ const StackAlertNavigator = () => {
                     headerLeft: null
                 }}
             />
-            <Stack.Screen name="All" component={AlertAllScreen} />
-            <Stack.Screen name="Fire" component={AlertFireScreen} />
-            <Stack.Screen name="Health" component={AlertHealthScreen} />
-            <Stack.Screen name="Roads" component={AlertRoadsScreen} />
-            <Stack.Screen name="Weather" component={AlertWeatherScreen} />
-            <Stack.Screen name="Other" component={AlertOtherScreen} />
+            <Stack.Screen name="AlAll" component={AlertAllScreen} />
+            <Stack.Screen name="AlFire" component={AlertFireScreen} />
+            <Stack.Screen name="AlHealth" component={AlertHealthScreen} />
+            <Stack.Screen name="AlRoads" component={AlertRoadsScreen} />
+            <Stack.Screen name="AlWeather" component={AlertWeatherScreen} />
+            <Stack.Screen name="AlOther" component={AlertOtherScreen} />
         </Stack.Navigator>
     )
 }
