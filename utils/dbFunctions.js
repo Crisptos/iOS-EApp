@@ -87,6 +87,23 @@ export const fetchBeReady = () => {
     return promise
 }
 
+export const fetchRecentBeReady = () => { 
+    const promise = new Promise((resolve, reject) => { 
+        db.transaction((tx) => { 
+            tx.executeSql(
+            `SELECT * FROM incidents WHERE category = 'BeReady' ORDER BY timeOfEvent DESC Limit;`, 
+            [], 
+            (_,result) => {
+                resolve(result)
+            }, 
+            (_,err) => {
+                reject(err)
+            })
+        })
+    })
+    return promise
+}
+
 export const fetchAlerts = () => { 
     const promise = new Promise((resolve, reject) => { 
         db.transaction((tx) => { 
@@ -104,11 +121,45 @@ export const fetchAlerts = () => {
     return promise
 }
 
+export const fetchCurrentAlert = () => { 
+    const promise = new Promise((resolve, reject) => { 
+        db.transaction((tx) => { 
+            tx.executeSql(
+            `SELECT * FROM incidents WHERE category = 'Alerts' ORDER BY timeOfEvent DESC LIMIT 1;`, 
+            [], 
+            (_,result) => {
+                resolve(result)
+            }, 
+            (_,err) => {
+                reject(err)
+            })
+        })
+    })
+    return promise
+}
+
 export const fetchAdvisory = () => { 
     const promise = new Promise((resolve, reject) => { 
         db.transaction((tx) => { 
             tx.executeSql(
             `SELECT * FROM incidents WHERE category = 'Advisory' ORDER BY timeOfEvent DESC;`, 
+            [], 
+            (_,result) => {
+                resolve(result)
+            }, 
+            (_,err) => {
+                reject(err)
+            })
+        })
+    })
+    return promise
+}
+
+export const fetchCurrentAdvisory = () => { 
+    const promise = new Promise((resolve, reject) => { 
+        db.transaction((tx) => { 
+            tx.executeSql(
+            `SELECT * FROM incidents WHERE category = 'Advisory' ORDER BY timeOfEvent DESC LIMIT 1;`, 
             [], 
             (_,result) => {
                 resolve(result)

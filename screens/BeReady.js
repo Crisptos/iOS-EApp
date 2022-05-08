@@ -1,8 +1,9 @@
-import React from 'react'; 
-import {Text,View, Button,Image, TouchableOpacity} from 'react-native';
+import React, {useState, useEffect} from 'react'; 
+import {View, Text, Button, Image, TouchableOpacity, RefreshControl, FlatList, Alert} from 'react-native'; 
 import {globalStyles} from '../styles/globalStyles';
+import {fetchRecentBeReady} from '../utils/dbFunctions';
 
-const BeReadyScreen = ({navigation}) => { 
+const BeReadyScreen = ({navigation}) => {
   return (
     <View style={globalStyles.stackNavStyle}>
         <View>
